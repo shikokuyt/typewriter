@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <style>
+    #div1 {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<h2>Hello World</h2>
+<div id="div1">Content</div>
+<script src="../dist/typewrite.0.0.1.min.js"></script>
+<script>
+  var div = document.getElementById('div1');
+  typewrite.move({
+    step: function (delta) {
+      div.style.left = 100*delta + 'px';
+    }
+  });
+</script>
+</body>
+</html>

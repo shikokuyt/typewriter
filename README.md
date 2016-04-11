@@ -36,5 +36,5 @@
 </script>
 ```
 
-1. [例子一(没有设置值)]()
-2. [例子二(自己设置值)]()
+1. [例子一(没有设置值)](http://shikokuyt.github.io/typewriter/demo/demo1.html)
+2. [例子二(自己设置值)](http://shikokuyt.github.io/typewriter/demo/demo2.html)

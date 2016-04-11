@@ -15,7 +15,7 @@ gulp.task('minify', function () {
 
 // 压缩辅助代码
 gulp.task('minifyLib', function () {
-  gulp.src('./src/js/lib/*.js')
+  gulp.src('./src/js/lib/utils.js')
       .pipe(uglify())
       .pipe(rename({
         suffix: '.min'

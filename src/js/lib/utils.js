@@ -25,9 +25,9 @@ var utils = (function (window, undefined) {
       var opts = {
         delay: options.delay || 10,
         duration: options.duration || 1000,
-        delta: options.delta || that.delta.linear,
+        delta: that.delta.quad,  // || that.delta.linear,
         step: options.step || null
-      }
+      };
       var start = new Date();
       var timer = setInterval(function () {
         var timePassed = new Date() - start; // 运动进程 0% -> 100%
@@ -49,27 +49,13 @@ var utils = (function (window, undefined) {
         return process;
       },
       // 2. 抛物线运动, n>=2较好
-      quad: function (process, n) {
-        return Math.pow(process, n);
+      quad: function (process) {
+        return Math.pow(process, 2);
       },
       // 3. 弹性运动
       back: function (process, x) {
         return Math.pow(process, 2) * ((x+1)*process-x);
       }
-    },
-
-    // 参数选项
-    setOpts: function (delay, duration, delta, step){
-      delay = delay || 10;
-      duration = duration || 1000,
-      delta = delta || null;
-      step = step || null;
-      return {
-        delay: delay,
-        duration: duration,
-        delta: delta,
-        step: step
-      };
     }
   };
 
